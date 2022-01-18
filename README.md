@@ -77,3 +77,5 @@ As a secret agent with a mission to save the world, Bond has been to many exotic
 ![](https://github.com/thatmeanlook/Minh_Portfolio/blob/main/images/map.png)
 
 Looking at the distribution on the map, England is on top of the list with 20 appearances over 24 movies. No surprise there since this is where Bond calls home. US, France and Italy are among the top locations chosen for Bond movies. Switzerland and Spain also appear in a few movies. It’ll be interesting to see where Bond’s next mission will take him.
+
+[Jupyter Notebook was used to created this analysis.](https://github.com/thatmeanlook/Minh_Portfolio/blob/main/jamesbond.ipynb)
