@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Luc's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div id="header_wrap" class="outer">
+            <header id="top_banner" class="inner">
+                <h1 id="project_title">Minh Luc</h1>
+                <p id="dsc">Data Science Portfolio</p>
+            </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <br><br>
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h1 id="bond-james-bond">“BOND, JAMES BOND.”</h1>
+
+                <p>James Bond (007) is a British Secret Service agent created
+                    in
+                    1953 by Ian Fleming. Over the years, there have been more
+                    than
+                    20 movies with different famous actors portrayed the
+                    British
+                    agent. As a fan of the series, I want to look at the data
+                    to
+                    explore some interesting ideas.</p>
+
+                <h2 id="description-of-james-bond-dataset">Description of James
+                    Bond Dataset</h2>
+
+                <p>I am going to work on the “James Bond Movie Dataset” from <a
+                        href="https://www.kaggle.com/dreb87/jamesbond">Kaggle</a>.
+                    This dataset includes information about 24 James Bond
+                    movies
+                    from 1962 to 2015.
+                    <br><br>
+                    <img src="/images/df.png" alt="" />
+                </p>
+
+                <p>Looking at the data, I want to explore these ideas:</p>
+
+                <ul>
+                    <li>
+                        <p>What do audience think about James Bond movies?</p>
+                    </li>
+                    <li>
+                        <p>Which Bond movie is the most successful?</p>
+                    </li>
+                    <li>
+                        <p>Who is the best rated Bond?</p>
+                    </li>
+                </ul>
+
+                <h2 id="data-cleaning">Data Cleaning</h2>
+                <p>There are 27 columns in the dataset. Let’s cleanup and
+                    select
+                    the columns that are related to our exploratory
+                    data analysis.</p>
+
+                <p><img src="/images/bond_df2.png" alt="" /></p>
+                <div id="list_1">
+                    <p>• Year: Release year of the movie</p>
+
+                    <p>• Movie: The movie title</p>
+
+                    <p>• Bond: Actor who played James Bond</p>
+
+                    <p>• World_Adj: The film’s worldwide gross earning adjusted
+                        based
+                        on 2013</p>
+
+                    <p>• Budget_Adj: The film’s budget adjusted based on 2013
+                    </p>
+
+                    <p>• Avg_User_IMDB: The average user rating from IMDB</p>
+
+                    <p>• Avg_User_Rtn_Tom: The average user rating from Rotten
+                        Tomatoes
+                    </p>
+
+                    <p>• Shooting_Loc: Shooting locations of the movie</p>
+                </div>
+
+                <h2 id="audience-acceptance">Audience Acceptance</h2>
+
+                <p>The first thing I want to do with this dataset is to see
+                    what
+                    the audience thinks of Bond movies over the years. Since
+                    the
+                    first release in 1962 to 2015, how has the rating changed?
+                    The
+                    dataset provides rating of each movie from IMDB and Rotten
+                    Tomatoes. Combine these 2 metrics, I can find the average
+                    rating of each movie.
+
+                </p>
+                <img src="/images/rating_data.png" alt="" />
+                <p>Plotting a line graph to see the trend of rating over the
+                    year:
+                </p>
+
+                <p><img src="/images/rating.png" alt="" /></p>
+
+                <p>Looking at the graph, the series has a good start in the 60s
+                    with consistent rating over 7.5. However, it trends down in
+                    next 2 decades. The 80s witnesses the downfall of Bond,
+                    with
+                    rating dips below 5.5 at the lowest. Things start to look
+                    up
+                    for Bond since 2000s. The rating for the series fluctuates
+                    over
+                    the years. One of the main contributing factors is who
+                    plays
+                    Bond, which bring us to the next point in this analysis.
+                </p>
+
+                <h2 id="who-is-the-best-bond">Who is the best Bond?</h2>
+
+                <p>There have been 6 changes of actor. To get an average score
+                    for
+                    each actor, I take all the movies with the same actor and
+                    calculate the mean rating.</p>
+
+                <p><img src="/images/bond_rate.png" alt="" /></p>
+
+                <p>With his class and charisma, there is no surprise that Sean
+                    Connery is rated the best Bond. Even though Daniel Craig is
+                    in
+                    second place, his rating is so close to Connery that the
+                    two
+                    can be considered as tie. Interestingly, Connery is the
+                    first
+                    actor to play Bond (1962) and Craig is the lasted one
+                    starting
+                    from 2006.</p>
+
+                <h2 id="commercial-success">Commercial Success</h2>
+
+                <p>The James Bond series has been a familiar name at the
+                    worldwide
+                    box office. By looking the gross earning of all the movie,
+                    we
+                    can easily see which movie has the highest revenue.
+                    However,
+                    just looking at the revenue doesn’t give us the full
+                    picture.
+                    I’m also curious about the return on investment of each
+                    movie,
+                    in other word, the ratio between Budget and Revenue.</p>
+
+                <p><img src="/images/revenue.png" alt="" /></p>
+
+                <p>2012’s “Skyfall” with Daniel Craig is the most commercially
+                    successful Bond film of all time, with over $1.1 billion at
+                    the
+                    worldwide box office. At second place is 1965’s
+                    “Thunderball”
+                    with Sean Connery.</p>
+
+                <p><img src="/images/ratio.png" alt="" /></p>
+
+                <p>Looking at the Budget/Revenue ratio metric, “Dr.No” is
+                    unbeatable with a ratio of almost 60. This is an incredible
+                    return on investment. Second place on this list is 1964’s
+                    “Goldfinger.”</p>
+
+                <h2 id="locations">Locations</h2>
+
+                <p>As a secret agent with a mission to save the world, Bond has
+                    been to many exotic destinations, from snowy mountains in
+                    Switzerland to deserts in Chile. Using the Shooting
+                    location
+                    provided in the dataset, I calculated the frequency each
+                    country appears in the series. I then plotted a choropleth
+                    map
+                    to visualize where Bond has been:</p>
+
+                <p><img src="/images/map.png" alt="" /></p>
+
+                <p>Looking at the distribution on the map, England is on top of
+                    the
+                    list with 20 appearances over 24 movies. No surprise there
+                    since this is where Bond calls home. US, France and Italy
+                    are
+                    among the top locations chosen for Bond movies. Switzerland
+                    and
+                    Spain also appear in a few movies. It’ll be interesting to
+                    see
+                    where Bond’s next mission will take him.</p>
+
+                <p><a
+                        href="https://github.com/thatmeanlook/Minh_Portfolio/blob/main/jamesbond.ipynb">Jupyter
+                        Notebook was used to created this analysis.</a></p>
+
+            </section>
+        </div>
+
+        <!-- FOOTER  -->
+        <div id="footer_wrap" class="outer">
+            <footer id="foot1" class="inner">
+
+                <p id="copy" class="copyright">Website maintained by <a
+                        href="https://github.com/thatmeanlook">thatmeanlook</a>
+                </p>
+                <p id="publish">Published with <a
+                        href="https://pages.github.com">GitHub
+                        Pages</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
